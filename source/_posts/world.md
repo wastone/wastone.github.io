@@ -1,8 +1,7 @@
 ---
-layout: hello
-title: world
-date: 2017-07-14 10:27:26
-tags:[life] 
+title: first
+date: 2017-07-11 14:13:48
+tags: [life]
 ---
 
 #hello world
