@@ -3,7 +3,7 @@ title: 一个简单算法的改进
 date: 2017-09-25 15:10:46
 comments: true
 reward: true
-tags: [算法]
+tags: [算法,随笔]
 ---
 
 >算法
