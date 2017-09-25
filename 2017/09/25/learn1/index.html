@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>learn1 | 石头个人站</title>
+  <title>一个简单算法的改进 | 石头个人站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个简单算法的改进 算法  最近看到一个经常做的一个算法题，判断一个数是不是素数?，素数的概念是在大于1的自然数中，只能被1和其本身整除的数成为质数，也是常说的素数，按照这个概念，我们常见得算法有：12345678910111213141516171819202122232425262728//方法一function isPrime_1(num)&amp;#123;    if(isNaN(num) ||">
+  <meta name="description" content="算法  最近看到一个经常做的一个算法题，判断一个数是不是素数?，素数的概念是在大于1的自然数中，只能被1和其本身整除的数成为质数，也是常说的素数，按照这个概念，我们常见得算法有：12345678910111213141516171819202122232425262728//方法一function isPrime_1(num)&amp;#123;    if(isNaN(num) || num &amp;lt;">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="learn1">
+<meta property="og:title" content="一个简单算法的改进">
 <meta property="og:url" content="http://yoursite.com/2017/09/25/learn1/index.html">
 <meta property="og:site_name" content="石头个人站">
-<meta property="og:description" content="一个简单算法的改进 算法  最近看到一个经常做的一个算法题，判断一个数是不是素数?，素数的概念是在大于1的自然数中，只能被1和其本身整除的数成为质数，也是常说的素数，按照这个概念，我们常见得算法有：12345678910111213141516171819202122232425262728//方法一function isPrime_1(num)&amp;#123;    if(isNaN(num) ||">
+<meta property="og:description" content="算法  最近看到一个经常做的一个算法题，判断一个数是不是素数?，素数的概念是在大于1的自然数中，只能被1和其本身整除的数成为质数，也是常说的素数，按照这个概念，我们常见得算法有：12345678910111213141516171819202122232425262728//方法一function isPrime_1(num)&amp;#123;    if(isNaN(num) || num &amp;lt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-25T07:15:38.871Z">
+<meta property="og:updated_time" content="2017-09-25T08:39:05.163Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="learn1">
-<meta name="twitter:description" content="一个简单算法的改进 算法  最近看到一个经常做的一个算法题，判断一个数是不是素数?，素数的概念是在大于1的自然数中，只能被1和其本身整除的数成为质数，也是常说的素数，按照这个概念，我们常见得算法有：12345678910111213141516171819202122232425262728//方法一function isPrime_1(num)&amp;#123;    if(isNaN(num) ||">
+<meta name="twitter:title" content="一个简单算法的改进">
+<meta name="twitter:description" content="算法  最近看到一个经常做的一个算法题，判断一个数是不是素数?，素数的概念是在大于1的自然数中，只能被1和其本身整除的数成为质数，也是常说的素数，按照这个概念，我们常见得算法有：12345678910111213141516171819202122232425262728//方法一function isPrime_1(num)&amp;#123;    if(isNaN(num) || num &amp;lt;">
   
     <link rel="alternative" href="/atom.xml" title="石头个人站" type="application/atom+xml">
   
@@ -158,7 +158,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      learn1
+      一个简单算法的改进
     </h1>
   
 
@@ -171,7 +171,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一个简单算法的改进"><a href="#一个简单算法的改进" class="headerlink" title="一个简单算法的改进"></a>一个简单算法的改进</h3><blockquote>
+        <blockquote>
 <p>算法</p>
 </blockquote>
 <p>最近看到一个经常做的一个算法题，<code>判断一个数是不是素数?</code>，素数的概念是<code>在大于1的自然数中，只能被1和其本身整除的数成为质数，也是常说的素数</code>，按照这个概念，我们常见得算法有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">//方法一</div><div class="line">function isPrime_1(num)&#123;</div><div class="line">    if(isNaN(num) || num &lt;= 1)&#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">    var tmp = num - 1;</div><div class="line">    for(var i = 2;i &lt;= tmp; i++)&#123;</div><div class="line">        if(num % i == 0)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return true;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//方法二   根据方法一改进  主要用到Math的sqrt方法筛选掉一部分 增加效率</div><div class="line">function isPrime_2(num)&#123;</div><div class="line">    if(isNaN(num) || num &lt;= 1)&#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">    var tmp = Math.sqrt(num);</div><div class="line">    for(var i = 2;i &lt;= tmp; i++)&#123;</div><div class="line">        if(num % i == 0)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return true;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
