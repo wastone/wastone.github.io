@@ -178,19 +178,7 @@
 </blockquote>
 <p>由1.11.3源码可以看出<code>jQuery</code>和<code>$</code>的关系<br><img src="../images/2.png" alt="image"></p>
 <p>其实<code>jQuery</code>和<code>$</code>就是一个东西（抽时间好好看看源码）</p>
-<p>用这个方法可以向jQuery自身扩展方法，例如</p>
-<pre><code>//扩展了一个maxNum方法，可以直接用$.maxNum调用
-$.extend({
-    maxNum:function(x,y){
-        if(x &gt; y){
-            return x;
-        }else{
-            return y;
-        }
-    }
-});
-var num = $.maxNum(3,4);//4
-</code></pre>
+<p>用这个方法可以向jQuery自身扩展方法，例如<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//扩展了一个maxNum方法，可以直接用$.maxNum调用</span></div><div class="line">$.extend(&#123;</div><div class="line">    <span class="attr">maxNum</span>:<span class="function"><span class="keyword">function</span>(<span class="params">x,y</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span>(x &gt; y)&#123;</div><div class="line">            <span class="keyword">return</span> x;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">return</span> y;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="keyword">var</span> num = $.maxNum(<span class="number">3</span>,<span class="number">4</span>);<span class="comment">//4</span></div></pre></td></tr></table></figure></p>
         
           <a class="article-more-a" href="/2017/09/27/jquery-plugin/#more">more >></a>
         
