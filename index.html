@@ -183,14 +183,9 @@
 <p>由1.11.3源码可以看出<code>jQuery</code>和<code>$</code>的关系<br><img src="../images/2.png" alt="image"></p>
 <p>其实<code>jQuery</code>和<code>$</code>就是一个东西（抽时间好好看看源码）</p>
 <p>用这个方法可以向jQuery自身扩展方法，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//扩展了一个maxNum方法，可以直接用$.maxNum调用</div><div class="line">$.extend(&#123;</div><div class="line">    maxNum:function(x,y)&#123;</div><div class="line">        if(x &gt; y)&#123;</div><div class="line">            return x;</div><div class="line">        &#125;else&#123;</div><div class="line">            return y;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">var num = $.maxNum(3,4);//4</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>第二种：<code>jQuery.fn.extend()</code>或者<code>$.fn.extend()</code><br>这种方法就是给jQuery的原型增加方法（源码 89行）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">jQuery.fn = jQuery.prototype = &#123;</div><div class="line">    //各种方法</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>我们用这个方法主要给jQuery对象增加方法，调用方式为：<code>$(ele).method()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$.fn.extend(&#123;</div><div class="line">    findFirst:function()&#123;</div><div class="line">        return this.get(0);</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>水平有限，写的错误的地方望指出</p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2017/09/27/jquery-plugin/#more">more >></a>
+        
       
 
       
